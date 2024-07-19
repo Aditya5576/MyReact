@@ -12,14 +12,18 @@ import { createRoot } from "react-dom/client";
 // import App from "./allTask/BulbTask/App.jsx"     ///Bulb task 
 // import App from "./Refs/App.jsx"
 // import App from "./allTask/BulbTask/App";
-import Nav from "./NavTask/Nav";
+// import Nav from "./NavTask/Nav";
+import App from "./eCom/App.jsx"
 
 // import App from "./allTask/CounterApp_FBC/App.jsx";     //Counter App using FunctionalBaseComponent
 
 
 // createRoot(document.getElementById("root")).render(<App />);
 
-createRoot(document.getElementById("root")).render(<Nav/>);
+// createRoot(document.getElementById("root")).render(<Nav/>);
 
 // createRoot(document.getElementById("root")).render(<Toastify/>);         //Call toast.jsx file here
+
+
+createRoot(document.getElementById("root")).render(<App/>);
 

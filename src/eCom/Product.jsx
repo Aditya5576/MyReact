@@ -13,13 +13,20 @@ const Product = () => {
   let [pqty, setpqyt] = useState(0);
 
   let handelInc = () => {
-    toast.success(`${pqty+1}Item Added to Cart`)
+    toast.success(`${pqty+1}Item Added to Cart`,{
+      position: "top-left",
+      autoClose: 2000,
+    });
+
     setpqyt(pqty + 1);
   };
 
   let handelDec = () => {
     if (pqty > 0) {
-      toast.error(`1 Item Removed from Cart`)
+      toast.error(`1 Item Removed from Cart`,{
+        autoClose: 2000,
+
+      })
       setpqyt(pqty - 1);
     }
   };

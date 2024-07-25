@@ -1,0 +1,66 @@
+/* Main container of Todo List */
+.todo{
+    width: 500px;
+    min-height: 632px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 44px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px white;
+
+}
+
+/* Header Part */
+.todo-header{
+    margin-top: 84px;
+    color: #002765;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 34px;
+    margin-left: 4px;
+}
+
+/* Todo Add BUtton */
+.todo-add{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+/* Input Field */
+.todo-input{
+    border-radius: 50px;
+    background: #edeef0; 
+    border: none;
+    outline: none;
+    width: 570px;
+    height: 80px;
+    padding-left: 35px;
+    font-size: 20px;
+}
+
+/* Add Button */
+.todo-add-btn{
+    border-radius: 50px;
+    background: #ff6739;
+    width: 150px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 370px;
+    margin-top: -82px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.todo-add-btn:hover{
+    box-shadow: 0px 0px 10px gray;
+}

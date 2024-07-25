@@ -13,13 +13,13 @@ import { createRoot } from "react-dom/client";
 // import App from "./Refs/App.jsx"
 // import App from "./allTask/BulbTask/App";
 // import Nav from "./NavTask/Nav";
-// import App from "./eCom/App.jsx"                //Ecom website App.jsx
+import App from "./eCom/App.jsx"                //Ecom website App.jsx
 
 // import App from "./allTask/CounterApp_FBC/App.jsx";     //Counter App using FunctionalBaseComponent
 
 // import App from "./ContextApi/App";
 
-import App from "./allTask/To-Do-Task/App";         //ToDoList Application
+// import App from "./allTask/To-Do-Task/App";         //ToDoList Application
 
 // import App from "./Routres/Components/App";         //Rourters Task
 

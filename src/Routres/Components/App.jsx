@@ -9,7 +9,9 @@ import Profile from './Profile'
 const App = () => {
   return (
     <>
-        <Router>
+    
+        {/* BrowserRouter wraps your app and keeps track of the current location */}
+        <Router>          
             <Nav/>
             <Routes>
                 <Route path='/' element={<Home/>}/>

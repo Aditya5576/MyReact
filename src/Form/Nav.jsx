@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../Css/style.css'
 
 const Nav = () => {
   return (
@@ -10,6 +9,7 @@ const Nav = () => {
         <Link className='content' to={"/signup"}>SIGNUP</Link>
 
     </nav>
+
   )
 }
 

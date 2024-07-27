@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import "./style.css"
 
 function Signup() {
@@ -13,16 +15,22 @@ function Signup() {
   let handelSubmit = (e) => {
     e.preventDefault();
     console.log(username, phone, email, password);
+    toast.success(`Account created Successfully`,{
+      position: "top-center",
+      autoClose: 2000,
+    });
 
     localStorage.setItem("user", username);
     localStorage.setItem("phone", phone);
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
 
-    navigate("/");
+    navigate("/login");
   };
 
   return (
+    <>
+    <h1 className="header">Signup Form</h1>
     <div className="signup-cont">
     <form action="" style={{ alignItems: "center" }} onSubmit={handelSubmit}>
       <input
@@ -56,11 +64,14 @@ function Signup() {
         onChange={(e) => {
           setPassword(e.target.value);
         }}
-      /><br /><br /><br />
+      /><br /><br />
 
-      <button>Signup</button>
+      <button>Signup</button><br />
+
+      <Link className='link' to={"/login"}>Already have account? Click here</Link>
     </form>
     </div>
+    </>
   );
 }
 

@@ -17,16 +17,33 @@ function Login() {
   let handelSubmit= (e)=>{
         e.preventDefault();
         console.log(username, password);
-        toast.success(`Login Successfully`,{
-          position: "top-center",
-          autoClose: 2000,
-        });
+        
+
+        let user=localStorage.getItem("user", username);
+        let pass=localStorage.getItem("password", password);
+
+        let storeUser=document.getElementById("user").value;
+        let storePass=document.getElementById("pass").value;
 
 
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
+        if(storePass === pass && storeUser === user){
 
-        navigation("/");
+          toast.success(`Login Successfully`,{
+            position: "top-center",
+            autoClose: 2000,
+          });
+
+          navigation("/");
+        }
+        else{
+          toast.error(`Invalid Credentials`,{
+            position: "top-center",
+            autoClose: 2000,
+          });
+
+        }
+       
+      
   }
 
 
@@ -36,12 +53,12 @@ function Login() {
     <div className='login-cont'>
 
       <form action="" style={{ alignItems: "center" }} onSubmit={handelSubmit}>
-        <input type="text" placeholder='Enter Username' name='username' onChange={(e)=>{
+        <input id='user' type="text" placeholder='Enter Username' name='username' onChange={(e)=>{
           setUsername(e.target.value);
         }}/><br /><br />
 
 
-        <input type="password" placeholder='Enter Password' name='password'onChange={(e)=>{
+        <input id='pass' type="password" placeholder='Enter Password' name='password'onChange={(e)=>{
           setpassword(e.target.value);
         }} /> <br /><br />
 

@@ -8,9 +8,6 @@ const Nav = () => {
     <Link className='link-tag' to={'/viewproduct'}>VIEW PRODUCT</Link>
     <Link className='link-tag' to={'/addproduct'}>ADD PRODUCT</Link>
 
-
-
-
    </nav>
   )
 }

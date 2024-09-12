@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import axiosInstance from "../helper/axiosInstance"
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const Addproduct = () => {
+
+  let navigate = useNavigate();
   let [productData, setProductData] = useState({
     pname: "",
     pprice: "",
@@ -15,27 +20,32 @@ const Addproduct = () => {
 
   let handelSubmit = (e) => {
     e.preventDefault();
-    console.log(productData);
-  };
+    let payload = productData;
+
+    axiosInstance.post("/products" , payload)
+    toast.success("ADDED ITEM")
+    navigate("/viewproduct")
+  }
 
   return (
     <div className="form-holder">
       <form action="" className="" onSubmit={handelSubmit}>
+        <h1 className="title">ADD PRODUCT!!</h1><br />
         {/* Name of Product */}
         <div className="addproduct">
-          <label htmlFor="">Name: </label>
+          <label htmlFor="">PRODUCT NAME: </label>
           <input type="text" name="pname" id="" onChange={data} />
         </div>
 
         {/* Price of Product */}
         <div className="addproduct">
-          <label htmlFor="">Price: </label>
+          <label htmlFor="">PRODUCT PRICE: </label>
           <input type="text" name="pprice" id="" onChange={data} />
         </div>
 
         {/* Quantity of Product */}
         <div className="addproduct">
-          <label htmlFor="">Qty: </label>
+          <label htmlFor="">PRODUCT QTY: </label>
           <input type="number" name="pqty" id="" onChange={data} />
         </div>
 

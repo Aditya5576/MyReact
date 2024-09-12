@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Viewproduct from './components/Viewproduct'
 import Addproduct from './components/Addproduct'
+import Updateproduct from './components/Updateproduct'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/viewproduct' element={<Viewproduct/>}/>
             <Route path='/addproduct' element={<Addproduct/>}/>
+            <Route path="/updateproduct/:id" element={<Updateproduct/>}/>
         </Routes>
     </Router>
   )

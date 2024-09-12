@@ -1,7 +1,7 @@
 import React from "react";  
 import { createRoot } from "react-dom/client";
 // import App from "./App";
-// import Toastify from "./Toastify/Toastify.jsx";    //Toastify popular library for displaying toast notifications in React
+import Toastify from "./Toastify/Toastify.jsx";    //Toastify popular library for displaying toast notifications in React
 // import App1 from "./App1";
 // import App from "./Props/App.jsx"               //Props file 
 // import App from "./Form/App"
@@ -27,13 +27,13 @@ import { createRoot } from "react-dom/client";
 // import App from "./useEffect/App";
 
 
-import App from "./ECom-Project/App";   ///Ecom-project
+// import App from "./ECom-Project/App";   ///Ecom-project
 
 
-createRoot(document.getElementById("root")).render(<App />);
+// createRoot(document.getElementById("root")).render(<App />);
 
 // createRoot(document.getElementById("root")).render(<Nav/>);
 
-// createRoot(document.getElementById("root")).render(<Toastify/>);         //Call toast.jsx file here
+createRoot(document.getElementById("root")).render(<Toastify/>);         //Call toast.jsx file here
 
 
